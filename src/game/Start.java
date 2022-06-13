@@ -141,7 +141,7 @@ public class Start {
 		end();
 
 	}
-
+// проверка перебора карт
 	public void chekHand(Player player) {
 
 		if (player.getCul() > 21) {
@@ -156,7 +156,7 @@ public class Start {
 		}
 
 	}
-
+//принятие решения компьютера о продолжении набора карт, чем меньше карт остается до 21, тем меньше вероятность, что он примет положительное решение.
 	public void decide(Player player) {
 		if (player.isDecide() == true) {
 			int a = 21 - player.getCul();
@@ -169,7 +169,7 @@ public class Start {
 			}
 		}
 	}
-
+// окончание игры при согласии игроков
 	public void end() {
 		int firstPlayer = ii.getCul();
 		int secondPlayer = you.getCul();
@@ -185,12 +185,12 @@ public class Start {
 		}
 
 	}
-
+//окончание игры при переборе одним из игроков
 	public void endOver(Player player) {
 		System.out.println(player.getName() + "Loose");
 		index = 1;
 	}
-
+//окончание игры при сборе 21 одним из играков
 	public void endTwentyOne(Player player) {
 		System.out.println(player.getName() + "Win");
 		this.index = 1;
